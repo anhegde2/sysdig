@@ -23,11 +23,10 @@ function install_curl_rpm {
 
 function download_yamls {
 	echo "* Downloading Sysdig cluster role yaml"
-	curl -s -o /tmp/sysdig-agent-clusterrole.yaml https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/kubernetes/sysdig-agent-clusterrole.yaml
+	curl -s -o /tmp/sysdig-agent-clusterrole.yaml https://github.com/anhegde2/sysdig/blob/master/agent_deploy/kubernetes/sysdig-agent-clusterrole.yaml
 	echo "* Downloading Sysdig config map yaml"
-	curl -s -o /tmp/sysdig-agent-configmap.yaml https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/kubernetes/sysdig-agent-configmap.yaml
-	echo "* Downloading Sysdig daemonset v2 yaml"
-	curl -s -o /tmp/sysdig-agent-daemonset-v2.yaml https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/kubernetes/sysdig-agent-daemonset-v2.yaml
+	curl -s -o /tmp/sysdig-agent-configmap.yaml https://github.com/anhegde2/sysdig/blob/master/agent_deploy/kubernetes/sysdig-agent-configmap.yaml
+	curl -s -o /tmp/sysdig-agent-daemonset-v2.yaml https://github.com/anhegde2/sysdig/blob/master/agent_deploy/kubernetes/sysdig-agent-daemonset-v2.yaml
 }
 
 function unsupported {
