@@ -3,9 +3,9 @@
 # Installer for Sysdig Agent on IBM Cloud Kubernetes Service (IKS)
 
 set -e
+
 function install_curl_deb {
 	export DEBIAN_FRONTEND=noninteractive
-
 	if ! hash curl > /dev/null 2>&1; then
 		echo "* Installing curl"
         $CMD_PREF apt-get update
