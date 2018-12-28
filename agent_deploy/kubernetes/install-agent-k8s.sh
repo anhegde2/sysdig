@@ -3,23 +3,23 @@
 # Installer for Sysdig Agent on IBM Cloud Kubernetes Service (IKS)
 
 set -e
+#####
+#function install_curl_deb {
+#	export DEBIAN_FRONTEND=noninteractive
 
-function install_curl_deb {
-	export DEBIAN_FRONTEND=noninteractive
+#	if ! hash curl > /dev/null 2>&1; then
+#		echo "* Installing curl"
+ #       $CMD_PREF apt-get update
+#		$CMD_PREF apt-get -qq -y install curl < /dev/null
+#	fi
+#}
 
-	if ! hash curl > /dev/null 2>&1; then
-		echo "* Installing curl"
-        $CMD_PREF apt-get update
-		$CMD_PREF apt-get -qq -y install curl < /dev/null
-	fi
-}
-
-function install_curl_rpm {
-	if ! hash curl > /dev/null 2>&1; then
-		echo "* Installing curl"
-		$CMD_PREF yum -q -y install curl
-	fi
-}
+#function install_curl_rpm {
+#	if ! hash curl > /dev/null 2>&1; then
+#		echo "* Installing curl"
+#		$CMD_PREF yum -q -y install curl
+#	fi
+#}
 
 function download_yamls {
 	echo "* Downloading Sysdig cluster role yaml"
