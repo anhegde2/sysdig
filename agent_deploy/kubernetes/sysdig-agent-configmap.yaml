@@ -6,7 +6,7 @@ data:
   dragent.yaml: |
     ### Agent tags
         new_k8s: true
-        k8s_cluster_name: mycluster
+        k8s_cluster_name: mycluster1
         tags: linux:ubuntu,dept:dev,local:nyc
     #                    #### Sysdig Software related config ####
     #                        # Sysdig collector address
